@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -45,5 +48,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void test(View view) {
+        EditText tonEdit = (EditText)findViewById(R.id.IndexEditText);
+        String tonTexte = tonEdit.getText().toString();
+        if(tonTexte.equals(""))
+            Toast.makeText(getApplicationContext(), "Entrez votre nom", Toast.LENGTH_LONG).show();
+        else
+            Toast.makeText(getApplicationContext(), "Bonjour " + tonTexte, Toast.LENGTH_LONG).show();
     }
 }

@@ -47,7 +47,7 @@
         android:layout_below="@id/IndexEditText"
         android:layout_marginTop="5dp"
 
-        android:onClick=""
+        android:onClick="test"
         android:layout_centerHorizontal="true"
         android:text="Valider" />
 
